@@ -29,7 +29,7 @@ pg_ctl -D /usr/local/var/postgres start
  FOURSQUARE_CLIENT_ID=YOUR_ID
  FOURSQUARE_CLIENT_SECRET=YOUR_CLIENT_SECRET
  DATABASE_URL to 
- DATABASE_URL=postgresql://user_root:user_password@127.0.0.1:5432/todo_test
+ DATABASE_URL=postgresql://user_root:user_password@127.0.0.1:5432/your_db_name
  
  Where user_name your root user and password your root password.
  
