@@ -18,9 +18,18 @@ module.exports = {
         es6: true,
         node: true
     },
+    settings: {
+        'import/resolver' : {
+            webpack: {
+                config: './webpack.config.alias.js'
+            }
+        },
+    },
+    parser: 'babel-eslint',
     rules: {
+        quotes: ['error', 'single'],
         'no-console': ['error', { allow: ['warn', 'error'] }],
-        'no-unused-vars': 0,
+        'no-unused-vars': ['warn'],
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
     }

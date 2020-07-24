@@ -1,0 +1,6 @@
+.recommended-places-container {
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  justify-content: space-between;
+}

@@ -27,3 +27,8 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\Service\FoursquareCategoriesGetter:
+        arguments:
+            $clientId: '%env(FOURSQUARE_CLIENT_ID)%'
+            $clientSecret: '%env(FOURSQUARE_CLIENT_SECRET)%'
+            $version: '20200719'

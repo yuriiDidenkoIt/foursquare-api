@@ -1,0 +1,32 @@
+@use '../Common';
+
+nav {
+  @extend %container-shadow;
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 2vh 0 2vh 0;
+    padding: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+
+    li {
+      a {
+        padding: 6vh 2vw;
+        text-decoration: none;
+        color: #34495e;
+        font-size: 0.99em;
+        &:hover {
+          color: #718daa;
+        }
+      }
+      &.active {
+       a {
+         color: red;
+       }
+      }
+    }
+  }
+}

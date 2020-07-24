@@ -1,3 +1,17 @@
 index:
     path: /
     controller: App\Controller\FoursquareController::index
+
+firstLevelCategories:
+    path: /first-level-categories
+    controller: App\Controller\FoursquareController::getFirstLevelCategories
+
+subCategories:
+    path: /categories/sub/{categoryId}
+    controller: App\Controller\FoursquareController::getSubCategories
+
+reactRouting:
+    path: /{reactRouting}
+    controller: App\Controller\FoursquareController::index
+    requirements:
+        reactRouting: .+

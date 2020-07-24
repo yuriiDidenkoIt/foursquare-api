@@ -1,12 +1,16 @@
 {
     "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.10.4",
+        "@babel/plugin-syntax-class-properties": "^7.10.4",
         "@babel/preset-react": "^7.10.4",
         "@symfony/webpack-encore": "^0.30.0",
+        "babel-eslint": "^10.1.0",
         "core-js": "^3.0.0",
         "eslint": "^7.3.1",
         "eslint-plugin-react": "^7.20.2",
         "eslint-plugin-react-hooks": "^4.0.5",
         "regenerator-runtime": "^0.13.2",
+        "sass-loader": "^8.0.0",
         "webpack-notifier": "^1.6.0"
     },
     "license": "UNLICENSED",
@@ -15,12 +19,16 @@
         "dev-server": "encore dev-server",
         "dev": "encore dev",
         "watch": "encore dev --watch",
-        "build": "encore production --progress"
+        "build": "encore production --progress",
+        "lint:js": "./node_modules/.bin/eslint --max-warnings 0 -f table --ext .js,.jsx assets/js/"
     },
     "dependencies": {
         "axios": "^0.19.2",
+        "classnames": "^2.2.6",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
-        "react-dom": "^16.13.1"
+        "react-dom": "^16.13.1",
+        "react-router-dom": "^5.2.0",
+        "sass": "^1.26.10"
     }
 }

@@ -1,0 +1,16 @@
+.category-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  background-color: #c4c3bc;
+  box-shadow: -0.3rem 1rem 2rem 0.7rem rgba(0, 0, 0, 0.75);
+
+  .sub-category-link {
+    border-color: #f4f4f4;
+    background-color: #c4c3bc;
+    padding: 0.2rem 0.4rem;
+  }
+}

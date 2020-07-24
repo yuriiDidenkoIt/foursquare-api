@@ -11,5 +11,11 @@
 {% endblock %}
 
 {% block javascripts %}
+    <script>
+         window.foursquareConfig = {
+             clientId: '{{ clientId }}',
+             clientSecret: '{{ clientSecret }}',
+         };
+    </script>
     {{ encore_entry_script_tags('app') }}
 {% endblock %}

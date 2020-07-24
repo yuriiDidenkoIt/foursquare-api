@@ -1,0 +1,38 @@
+@use 'Common';
+
+body {
+  font-family: sans-serif;
+  font-size: 1em;
+
+  button, img {
+    &:hover {
+      filter: drop-shadow(2px 4px 6px black);
+    }
+  }
+
+  h1 {
+    color: #718daa;;
+    font-family: "Raleway", sans-serif;
+    font-size: 2vw;
+    font-weight: 800;
+    line-height: 2vw;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .container {
+    @extend %container-shadow;
+    margin-top: 2vh;
+    height: 85vh;
+    overflow: scroll;
+    padding: 1rem;
+
+    ul {
+      list-style: none;
+
+      li {
+        padding: 0.5em;
+      }
+    }
+  }
+}

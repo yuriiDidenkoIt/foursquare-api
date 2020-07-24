@@ -1,4 +1,5 @@
-var Encore = require('@symfony/webpack-encore');
+const Encore = require('@symfony/webpack-encore');
+const alias = require('./webpack.config.alias');
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -54,7 +55,7 @@ Encore
     })
 
     // enables Sass/SCSS support
-    //.enableSassLoader()
+    .enableSassLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
@@ -69,6 +70,17 @@ Encore
     // uncomment if you use API Platform Admin (composer req api-admin)
     .enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
+    .configureBabel((babelConfig) => {
+        babelConfig.plugins.push('@babel/plugin-syntax-class-properties');
+        babelConfig.plugins.push('@babel/plugin-proposal-class-properties');
+    })
 ;
 
-module.exports = Encore.getWebpackConfig();
+const config = Encore.getWebpackConfig();
+
+config.resolve = {
+    ...alias.resolve,
+    extensions: ['.js', '.jsx']
+};
+
+module.exports = config;
